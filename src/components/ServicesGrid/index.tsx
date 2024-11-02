@@ -1,31 +1,37 @@
 // components/ServicesGrid.tsx
-import React from "react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const services = [
   {
     icon: "/icons/User.svg",
-    text: "You should hear yourself talk, (you’ll feel so much better).",
+    text: "Terapia Cognitivo Comportamental (TCC)",
+    link: "/terapia-cognitivo-comportamental",
   },
   {
     icon: "/icons/Users.svg",
-    text: "You should hear yourself talk, (you’ll feel so much better).",
+    text: "Avaliação Neuropsicológica",
+    link: "/avaliacao-neuropsicologica",
   },
   {
     icon: "/icons/PuzzlePiece.svg",
-    text: "You should hear yourself talk, (you’ll feel so much better).",
+    text: "Supervisão Clínica em Neuropsicologia",
+    link: "/supervisao-clinica",
   },
   {
     icon: "/icons/Book.svg",
-    text: "You should hear yourself talk, (you’ll feel so much better).",
+    text: "Grupo de Estudos Sou Neuropsi",
+    link: "/grupo-estudos-sou-neuropsi",
   },
   {
     icon: "/icons/Flag.svg",
-    text: "You should hear yourself talk, (you’ll feel so much better).",
+    text: "Curso Neuropsi Descomplicada",
+    link: "/curso-neuropsi-descomplicada",
   },
   {
     icon: "/icons/Gavel.svg",
-    text: "You should hear yourself talk, (you’ll feel so much better).",
+    text: "Contato",
+    link: "/contato",
   },
 ];
 
@@ -45,7 +51,9 @@ const ServicesGrid = () => {
                 className={styles.icon}
               />
               <p>{service.text}</p>
-              <button className={styles.button}>Conheça Mais</button>
+              <Link href={service.link} passHref>
+                <button className={styles.button}>Conheça Mais</button>
+              </Link>
             </div>
           ))}
         </div>

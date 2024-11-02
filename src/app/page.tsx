@@ -1,11 +1,11 @@
 // app/page.tsx
-import Header from "@/components/Header";
 import Banner from "@/components/Banner";
-import styles from "./page.module.scss"; // Estilos SCSS (será criado depois)
-import Profile from "@/components/Profile";
-import ServicesGrid from "@/components/ServicesGrid";
-import QuoteSection from "@/components/QuoteSection";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Profile from "@/components/Profile";
+import QuoteSection from "@/components/QuoteSection";
+import ServicesGrid from "@/components/ServicesGrid";
+import styles from "./page.module.scss"; // Estilos SCSS (será criado depois)
 
 export default function HomePage() {
   return (
@@ -14,7 +14,9 @@ export default function HomePage() {
       <Banner />
       <div className={styles.Profile}>
         <Profile />
-        <ServicesGrid />
+        <div id="services">
+          <ServicesGrid />
+        </div>
         <QuoteSection />
         <Footer />
       </div>

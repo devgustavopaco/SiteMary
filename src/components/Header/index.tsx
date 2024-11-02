@@ -1,8 +1,9 @@
+// components/Header.tsx
 "use client";
-import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import styles from "./styles.module.scss";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import styles from "./styles.module.scss";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,12 +31,9 @@ const Header = () => {
         <Link href="/" className={pathname === "/" ? styles.active : ""}>
           Home
         </Link>
-        <Link
-          href="/areas-de-interesse"
-          className={pathname === "/areas-de-interesse" ? styles.active : ""}
-        >
+        <a href="#services" className={pathname === "/" ? styles.active : ""}>
           Áreas de Interesse
-        </Link>
+        </a>
         <Link
           href="/contato"
           className={pathname === "/contato" ? styles.active : ""}
