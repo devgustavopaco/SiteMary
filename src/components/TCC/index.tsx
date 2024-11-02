@@ -26,7 +26,7 @@ const TCC: React.FC = () => {
             suscetíveis, ocorre o sofrimento. A TCC é uma parte importante da
             mudança desse paradigma, auxiliando a lidar com o pensamento
             automático disfuncional do qual talvez nem estejamos cientes - que
-            muitas vezes é "disfarçado" de fato ou verdade.
+            muitas vezes é &ldquo;disfarçado&rdquo; de fato ou verdade.
           </p>
         </div>
         <div className={styles.button}>
