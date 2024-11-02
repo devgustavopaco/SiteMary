@@ -14,11 +14,11 @@ const CN: React.FC = () => {
         <div className={styles.text}>
           <p>
             O que é o Neuropsi Descomplicada exatamente? É um curso, um passo a
-            passo, é o jeito que a Maryane ensina a "destravar" o raciocínio
-            clínico no exame neuropsicológico. E o que quer dizer destravar o
-            raciocínio clínico? É implementar com clareza todas as etapas da
-            avaliação, de forma a fazer uma avaliação que realmente ajude o
-            paciente, com mais clareza para unir todos os procedimentos
+            passo, é o jeito que a Maryane ensina a &ldquo;destravar&ldquo; o
+            raciocínio clínico no exame neuropsicológico. E o que quer dizer
+            destravar o raciocínio clínico? É implementar com clareza todas as
+            etapas da avaliação, de forma a fazer uma avaliação que realmente
+            ajude o paciente, com mais clareza para unir todos os procedimentos
             utilizados, sem ser somente aquela avaliação que somente fala sobre
             resultado de testes.
           </p>
