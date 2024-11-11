@@ -1,4 +1,3 @@
-// components/ServicesGrid.tsx
 import Link from "next/link";
 import styles from "./styles.module.scss";
 

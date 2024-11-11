@@ -8,10 +8,15 @@ import styles from "./styles.module.scss";
 const Home: React.FC = () => {
   return (
     <div className={styles.container}>
-      <HeaderService />
+      <div className={styles.header}>
+        <HeaderService />
+      </div>
       <div className={styles.content}>
         <Sidebar />
-        <TCC />
+
+        <div className={styles.tcc}>
+          <TCC />
+        </div>
       </div>
     </div>
   );

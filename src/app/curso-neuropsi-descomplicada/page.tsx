@@ -10,8 +10,12 @@ const Home: React.FC = () => {
     <div className={styles.container}>
       <HeaderService />
       <div className={styles.content}>
-        <Sidebar />
-        <CND />
+        <div className={styles.sidebar}>
+          <Sidebar />
+        </div>
+        <div className={styles.cnd}>
+          <CND />
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,9 @@
-// components/Header.module.scss
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
   width: 100%;
-  height: 10%;
   position: fixed;
   z-index: 10;
   background: transparent;
@@ -14,10 +12,18 @@
   &.scrolled {
     background: rgba(0, 0, 0, 0.5);
   }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .logo {
   padding: 0 60px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .nav {
@@ -34,8 +40,26 @@
       color: #f0f0f0;
     }
 
-    &.active {
+    &.ativo {
       color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    padding-top: 4rem;
+    align-items: center;
+    gap: 2rem;
+
+    &.navAberto {
+      display: flex;
     }
   }
 }
@@ -48,5 +72,29 @@
   a img {
     width: 24px;
     filter: brightness(0) invert(1);
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.menuHamburguer {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 20;
   }
 }

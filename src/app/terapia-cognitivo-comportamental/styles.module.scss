@@ -8,3 +8,18 @@
   display: flex;
   flex: 1;
 }
+
+.sidebar {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.tcc {
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

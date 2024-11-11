@@ -1,5 +1,3 @@
-// components/Profile.module.scss
-
 .profile {
   background-color: #fff;
 
@@ -12,6 +10,12 @@
     max-width: 1300px;
     margin: 0 auto;
     height: 700px;
+
+    @media (max-width: 768px) {
+      display: block;
+      flex-direction: column;
+      height: 1200px;
+    }
   }
 
   .imageContainer {

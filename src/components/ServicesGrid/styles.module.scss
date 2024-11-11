@@ -1,5 +1,3 @@
-// components/ServicesGrid.module.scss
-
 .servicesSection {
   padding: 4rem 5rem;
   background-color: #001f3f;
@@ -35,6 +33,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .card {
