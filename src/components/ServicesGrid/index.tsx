@@ -29,8 +29,8 @@ const services = [
   },
   {
     icon: "/icons/Gavel.svg",
-    text: "Contato",
-    link: "/contato",
+    text: "Quero a opinião de um Neurologista",
+    link: "/neurologista",
   },
 ];
 

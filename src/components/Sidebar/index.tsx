@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
     },
     { name: "Grupo de Estudos Sou Neuropsi", href: "/grupo-de-estudos" },
     { name: "Curso Neuropsi Descomplicada", href: "/curso-neuropsi" },
-    { name: "Contato", href: "/contato" },
+    { name: "Quero a opinião de um Neurologista", href: "/neuro" },
   ];
 
   return (
