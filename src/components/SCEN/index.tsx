@@ -6,7 +6,7 @@ const SCEN: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.banner}>
-          <img src="/images/banner3.jpg" alt="" />
+          <img src="/images/book.jpg" alt="" />
         </div>
         <div className={styles.title}>
           <h1>Supervisão Clínica em Neuropsicologia</h1>

@@ -9,7 +9,7 @@ const Neuro: React.FC = () => {
           <img src="/images/neuro.jpg" alt="" />
         </div>
         <div className={styles.title}>
-          <h1>Avaliação Neuropsicológica</h1>
+          <h1>Consulta com Neurologista</h1>
         </div>
         <div className={styles.text}>
           <p>

@@ -28,11 +28,7 @@ const TCC: React.FC = () => {
             automático disfuncional do qual talvez nem estejamos cientes - que
             muitas vezes é &ldquo;disfarçado&rdquo; de fato ou verdade.
           </p>
-        </div>
-        <div className={styles.button}>
-          <button>Quero iniciar minha terapia</button>
-        </div>
-        <div className={styles.text}>
+
           <p>
             Através da TCC, os pacientes aprendem a identificar esses
             pensamentos automáticos, avaliar se seu pensamento reflete com

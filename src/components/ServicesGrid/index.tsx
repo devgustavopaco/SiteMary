@@ -30,7 +30,7 @@ const services = [
   {
     icon: "/icons/Gavel.svg",
     text: "Quero a opinião de um Neurologista",
-    link: "/neurologista",
+    link: "/neuro",
   },
 ];
 

@@ -6,7 +6,7 @@ const AN: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.banner}>
-          <img src="/images/banner23.jpg" alt="" />
+          <img src="/images/avalia.jpg" alt="" />
         </div>
         <div className={styles.title}>
           <h1>Avaliação Neuropsicológica</h1>
@@ -125,7 +125,7 @@ const AN: React.FC = () => {
           </div>
         </div>
         <div className={styles.button}>
-          <button>Quero iniciar minha terapia</button>
+          <button>Quero agendar minha avaliação</button>
         </div>
       </div>
     </main>
