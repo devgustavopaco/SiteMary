@@ -42,18 +42,16 @@ const Footer = () => {
           <ul>
             <li>
               <Link href="/" passHref>
-                <a>Home</a>
+                Home
               </Link>
             </li>
             <li>
               <Link href="/terapia-cognitivo-comportamental" passHref>
-                <a>Áreas de Interesse</a>
+                Áreas de Interesse
               </Link>
             </li>
             <li>
-              <Link href="/contato">
-                <a>Contato</a>
-              </Link>
+              <Link href="/contato">Contato</Link>
             </li>
           </ul>
         </div>

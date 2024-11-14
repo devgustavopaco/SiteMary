@@ -45,7 +45,7 @@ const Header = () => {
         <Image
           src="/images/logo.png"
           alt="Logo Maryane Cavalcanti"
-          width={100}
+          width={200}
           height={100}
         />
       </div>
@@ -88,39 +88,26 @@ const Header = () => {
       </nav>
       <div className={styles.social}>
         <Link href="#" passHref>
-          <a>
-            <Image
-              src="/images/linkedin.svg"
-              alt="LinkedIn"
-              width={24}
-              height={24}
-            />
-          </a>
+          <Image
+            src="/images/linkedin.svg"
+            alt="LinkedIn"
+            width={24}
+            height={24}
+          />
         </Link>
         <Link href="#" passHref>
-          <a>
-            <Image
-              src="/images/face.svg"
-              alt="Facebook"
-              width={24}
-              height={24}
-            />
-          </a>
+          <Image src="/images/face.svg" alt="Facebook" width={24} height={24} />
         </Link>
         <Link href="#" passHref>
-          <a>
-            <Image
-              src="/images/insta.svg"
-              alt="Instagram"
-              width={24}
-              height={24}
-            />
-          </a>
+          <Image
+            src="/images/insta.svg"
+            alt="Instagram"
+            width={24}
+            height={24}
+          />
         </Link>
         <Link href="#" passHref>
-          <a>
-            <Image src="/images/email.svg" alt="Email" width={24} height={24} />
-          </a>
+          <Image src="/images/email.svg" alt="Email" width={24} height={24} />
         </Link>
       </div>
       <div className={styles.menuHamburguer} onClick={toggleMenu}>

@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./styles.module.scss";
 
 const QuoteSection = () => {
@@ -21,8 +23,8 @@ const QuoteSection = () => {
           cérebro é moldado pela experiência.”
           <span>Oliver Sacks</span>
         </blockquote>
-        <button onClick={handleWhatsAppClick}>
-          Quero iniciar minha terapia
+        <button onClick={handleWhatsAppClick} className={styles.contactButton}>
+          Entre em contato
         </button>
       </div>
     </section>

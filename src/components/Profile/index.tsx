@@ -10,8 +10,8 @@ const Profile = () => {
           <Image
             src="/images/profile.png"
             alt="Maryane Cavalcanti"
-            width={200}
-            height={200}
+            width={500}
+            height={500}
           />
         </div>
         <div className={styles.info}>
