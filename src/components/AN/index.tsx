@@ -15,11 +15,7 @@ const AN: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.bannerAv}>
-          <img
-            src="/images/bannerAv.jpeg"
-            alt=""
-            // style={{ width: "500px", height: "300px" }}
-          />
+          <img src="/images/bannerAv.jpeg" alt="" />
         </div>
         <div className={styles.title}>
           <h1>Avaliação Neuropsicológica</h1>

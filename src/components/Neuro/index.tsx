@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import styles from "../TCC/styles.module.scss";
 
@@ -17,7 +16,7 @@ const Neuro: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.bannerNeuro}>
-          <Image src="/images/neuro.jpg" alt="" width={800} height={600} />
+          <img src="/images/neuro.jpg" alt="" />
         </div>
         <div className={styles.title}>
           <h1>Consulta com Neurologista</h1>

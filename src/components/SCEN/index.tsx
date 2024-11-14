@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import styles from "../TCC/styles.module.scss";
 
@@ -17,12 +16,7 @@ const SCEN: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.bannerSup}>
-          <Image
-            src="/images/bannerSup.jpeg"
-            alt=""
-            width={1200}
-            height={400}
-          />
+          <img src="/images/bannerSup.jpeg" alt="" />
         </div>
         <div className={styles.title}>
           <h1>Supervisão Clínica em Neuropsicologia</h1>

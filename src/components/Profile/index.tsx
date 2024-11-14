@@ -1,5 +1,4 @@
 // components/Profile.tsx
-import Image from "next/image";
 import styles from "./styles.module.scss";
 
 const Profile = () => {
@@ -7,12 +6,7 @@ const Profile = () => {
     <section className={styles.profile}>
       <div className={styles.content}>
         <div className={styles.imageContainer}>
-          <Image
-            src="/images/profile.png"
-            alt="Maryane Cavalcanti"
-            width={500}
-            height={500}
-          />
+          <img src="/images/profile.png" alt="Maryane Cavalcanti" />
         </div>
         <div className={styles.info}>
           <h1>Maryane Cavalcanti</h1>

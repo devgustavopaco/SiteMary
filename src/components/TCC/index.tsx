@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import styles from "./styles.module.scss";
 
@@ -16,7 +15,7 @@ const TCC: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.banner}>
-          <Image src="/images/banner1.jpg" alt="" width={1200} height={600} />
+          <img src="/images/banner1.jpg" alt="" />
         </div>
         <div className={styles.title}>
           <h1>Terapia Cognitivo Comportamental (TCC)</h1>

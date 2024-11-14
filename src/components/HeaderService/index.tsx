@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 
@@ -10,7 +9,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuAberto, setMenuAberto] = useState(false);
   const pathname = usePathname();
-
+  const router = useRouter();
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
   };
@@ -35,19 +34,23 @@ const Header = () => {
       href: "/supervisao-clinica",
     },
     { name: "Grupo de Estudos Sou Neuropsi", href: "/grupo-de-estudos" },
-    { name: "Curso Neuropsi Descomplicada", href: "/curso-neuropsi" },
+    {
+      name: "Curso Neuropsi Descomplicada",
+      href: "/curso-neuropsi-descomplicada",
+    },
     { name: "Contato", href: "/contato" },
   ];
-
+  const handleHomeClick = () => {
+    router.push("/");
+  };
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={styles.logo}>
-        <Image
-          src="/images/logo.png"
-          alt="Logo Maryane Cavalcanti"
-          width={200}
-          height={100}
-        />
+      <div
+        className={styles.logo}
+        onClick={handleHomeClick}
+        style={{ cursor: "pointer" }}
+      >
+        <img src="/images/logo.png" alt="Logo Maryane Cavalcanti" />
       </div>
       <nav className={`${styles.nav} ${menuAberto ? styles.navAberto : ""}`}>
         <Link
@@ -88,34 +91,22 @@ const Header = () => {
       </nav>
       <div className={styles.social}>
         <Link href="#" passHref>
-          <Image
-            src="/images/linkedin.svg"
-            alt="LinkedIn"
-            width={24}
-            height={24}
-          />
+          <img src="/images/linkedin.svg" alt="LinkedIn" />
         </Link>
         <Link href="#" passHref>
-          <Image src="/images/face.svg" alt="Facebook" width={24} height={24} />
+          <img src="/images/face.svg" alt="Facebook" />
         </Link>
         <Link href="#" passHref>
-          <Image
-            src="/images/insta.svg"
-            alt="Instagram"
-            width={24}
-            height={24}
-          />
+          <img src="/images/insta.svg" alt="Instagram" />
         </Link>
         <Link href="#" passHref>
-          <Image src="/images/email.svg" alt="Email" width={24} height={24} />
+          <img src="/images/email.svg" alt="Email" />
         </Link>
       </div>
       <div className={styles.menuHamburguer} onClick={toggleMenu}>
-        <Image
+        <img
           src={menuAberto ? "/images/x.svg" : "/images/menu.svg"}
           alt="Menu"
-          width={24}
-          height={24}
         />
       </div>
     </header>

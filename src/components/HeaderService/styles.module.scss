@@ -99,7 +99,7 @@
 .menuHamburguer {
   display: none;
   cursor: pointer;
-  position: relative;
+
   z-index: 20;
 
   img {
@@ -109,7 +109,7 @@
 
   @media (max-width: 768px) {
     display: block;
-    position: fixed;
+
     top: 1rem;
     right: 1rem;
   }
