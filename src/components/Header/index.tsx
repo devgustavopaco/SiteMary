@@ -59,12 +59,12 @@ const Header = () => {
         </Link>
       </nav>
       <div className={styles.social}>
-        <Link href="#" passHref>
+        {/* <Link href="#" passHref>
           <img src="/images/linkedin.svg" alt="LinkedIn" />
         </Link>
         <Link href="#" passHref>
           <img src="/images/face.svg" alt="Facebook" />
-        </Link>
+        </Link> */}
         <Link href="#" passHref>
           <img src="/images/insta.svg" alt="Instagram" />
         </Link>

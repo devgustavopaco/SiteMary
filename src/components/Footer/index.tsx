@@ -25,12 +25,12 @@ const Footer = () => {
         <div className={styles.footerColumn}>
           <h3>Social</h3>
           <ul>
-            <li>
+            {/* <li>
               <a href="#">LinkedIn</a>
             </li>
             <li>
               <a href="#">Facebook </a>
-            </li>
+            </li> */}
             <li>
               <a href="">Instagram </a>
             </li>
