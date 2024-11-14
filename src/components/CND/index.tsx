@@ -75,7 +75,7 @@ const CN: React.FC = () => {
           name: "",
           email: "",
           phone: "",
-        }); // Clear form data
+        });
       } else {
         toast.error("Falha ao enviar o formulário.");
       }
