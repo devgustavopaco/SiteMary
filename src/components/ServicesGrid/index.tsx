@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 
@@ -44,11 +45,14 @@ const ServicesGrid = () => {
         <div className={styles.grid}>
           {services.map((service, index) => (
             <div key={index} className={styles.card}>
-              <img
+              <Image
                 src={service.icon}
                 alt="Service Icon"
                 className={styles.icon}
+                width={50} // Substitua pelo valor real da largura
+                height={50} // Substitua pelo valor real da altura
               />
+
               <p>{service.text}</p>
               <Link href={service.link} passHref>
                 <button className={styles.button}>Conheça Mais</button>

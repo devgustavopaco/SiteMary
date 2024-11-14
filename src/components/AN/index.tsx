@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import styles from "../TCC/styles.module.scss";
 
@@ -14,7 +15,7 @@ const AN: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.bannerAv}>
-          <img src="/images/bannerAv.jpeg" alt="" />
+          <Image src="/images/bannerAv.jpeg" alt="" width={500} height={300} />
         </div>
         <div className={styles.title}>
           <h1>Avaliação Neuropsicológica</h1>

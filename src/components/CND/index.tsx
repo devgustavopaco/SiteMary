@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { FormEvent, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -99,7 +100,12 @@ const CN: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.bannerCurso}>
-          <img src="/images/cerebelo.webp" alt="Banner" />
+          <Image
+            src="/images/cerebelo.webp"
+            alt="Banner"
+            width={500}
+            height={300}
+          />
         </div>
         <div className={styles.title}>
           <h1>Curso Neuropsi Descomplicada</h1>
