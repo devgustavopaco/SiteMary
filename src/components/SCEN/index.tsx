@@ -2,6 +2,14 @@ import React from "react";
 import styles from "../TCC/styles.module.scss";
 
 const SCEN: React.FC = () => {
+  const handleWhatsAppClick = (e: any) => {
+    e.preventDefault(); // Evita o comportamento padrão do Link
+    window.open(
+      "https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta.",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
   return (
     <main className={styles.container}>
       <div className={styles.content}>
@@ -52,13 +60,9 @@ const SCEN: React.FC = () => {
           </p>
         </div>
         <div className={styles.button}>
-          <a
-            href="https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button>Quero iniciar minha terapia</button>
-          </a>
+          <button onClick={handleWhatsAppClick}>
+            Quero iniciar minha terapia
+          </button>
         </div>
       </div>
     </main>
