@@ -36,7 +36,7 @@ const Header = () => {
           Home
         </Link>
         <a
-          href="#services"
+          href="/terapia-cognitivo-comportamental"
           className={pathname === "/" ? styles.ativo : ""}
           onClick={() => setMenuAberto(false)}
         >

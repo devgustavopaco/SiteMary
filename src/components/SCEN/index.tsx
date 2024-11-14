@@ -5,8 +5,8 @@ const SCEN: React.FC = () => {
   return (
     <main className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.banner}>
-          <img src="/images/banner3.jpg" alt="" />
+        <div className={styles.bannerSup}>
+          <img src="/images/bannerSup.jpeg" alt="" />
         </div>
         <div className={styles.title}>
           <h1>Supervisão Clínica em Neuropsicologia</h1>
@@ -52,7 +52,13 @@ const SCEN: React.FC = () => {
           </p>
         </div>
         <div className={styles.button}>
-          <button>Quero iniciar minha terapia</button>
+          <a
+            href="https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Quero iniciar minha terapia</button>
+          </a>
         </div>
       </div>
     </main>

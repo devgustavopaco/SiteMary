@@ -2,15 +2,19 @@
 
 import React, { FormEvent, useState } from "react";
 import styles from "./styles.module.scss";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     advice: "",
     budget: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -23,10 +27,36 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setIsLoading(true); // Start loading
 
-    console.log("Form submitted", formData);
+    try {
+      const response = await fetch("/api/contactForm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Formulário enviado com sucesso!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          advice: "",
+          budget: "",
+          message: "",
+        }); // Clear form
+      } else {
+        toast.error("Falha ao enviar o formulário.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Erro ao enviar o formulário.");
+    } finally {
+      setIsLoading(false); // Stop loading
+    }
   };
 
   return (
@@ -35,27 +65,35 @@ const ContactForm: React.FC = () => {
         <div className={styles.contactText}>
           <h2>Vamos Conversar</h2>
           <p>
-            Tem uma grande ideia ou precisa desenvolver sua marca? Estamos aqui
-            para ajudar! Entre em contato conosco, adoraríamos ouvir mais sobre
-            seu projeto e descobrir como podemos colaborar para trazer suas
-            ideias à vida.
+            Precisa de apoio psicológico ou deseja iniciar sua jornada de
+            autoconhecimento? Estamos aqui para ajudar! Entre em contato conosco
+            e conte-nos um pouco sobre você. Adoraríamos entender como podemos
+            colaborar para que você alcance bem-estar e equilíbrio em sua vida.
           </p>
+
           <h3>Email</h3>
-          <p>leeds@gmail.com</p>
+          <p>maryanecavalcanti@gmail.com</p>
           <h3>Socials</h3>
           <ul>
             <li>
               <a href="#">Instagram</a>
             </li>
             <li>
-              <a href="#">Twitter</a>
-            </li>
-            <li>
               <a href="#">Facebook</a>
             </li>
           </ul>
+          <a
+            href="https://wa.me/5585998482733"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className={styles.whatsappButton}>
+              Entre em contato pelo WhatsApp
+            </button>
+          </a>
         </div>
 
+        {/* Form */}
         <form className={styles.contactForm} onSubmit={handleSubmit}>
           <input
             type="text"
@@ -73,7 +111,15 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
           />
-          <select
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Telefone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+          {/* <select
             name="advice"
             value={formData.advice}
             onChange={handleChange}
@@ -82,9 +128,7 @@ const ContactForm: React.FC = () => {
             <option value="">
               Qual tipo de orientação você está buscando?
             </option>
-            <option value="Project">Projeto</option>
-            <option value="Consulting">Consultas</option>
-            <option value="Other">Outro</option>
+            <option value="Consulta">Consulta</option>
           </select>
           <select
             name="budget"
@@ -92,11 +136,9 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
           >
-            <option value="">Selecione o orçamento do projeto</option>
-            <option value="low">Baixo</option>
-            <option value="medium">Médio</option>
-            <option value="high">Alto</option>
-          </select>
+            <option value="">Selecione o Tipo da Consulta</option>
+            <option value="Terapia Cognitiva">Terapia Cognitiva</option>
+          </select> */}
           <textarea
             name="message"
             placeholder="Mensagem..."
@@ -105,9 +147,12 @@ const ContactForm: React.FC = () => {
             rows={4}
             required
           />
-          <button type="submit">Enviar</button>
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? <span className={styles.spinner}></span> : "Enviar"}
+          </button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

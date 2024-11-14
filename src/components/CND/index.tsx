@@ -1,7 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import styles from "../TCC/styles.module.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const testimonials = [
   {
@@ -33,22 +40,58 @@ const testimonials = [
 
 const CN: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handlePrev = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    );
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true); // Start loading
+
+    try {
+      const response = await fetch("/api/contactForm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Formulário enviado com sucesso!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+        }); // Clear form data
+      } else {
+        toast.error("Falha ao enviar o formulário.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Erro ao enviar o formulário.");
+    } finally {
+      setIsLoading(false); // Stop loading
+    }
   };
 
   return (
     <main className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.banner}>
-          <img src="/images/banner23.jpg" alt="" />
+        <div className={styles.bannerCurso}>
+          <img src="/images/cerebelo.webp" alt="Banner" />
         </div>
         <div className={styles.title}>
           <h1>Curso Neuropsi Descomplicada</h1>
@@ -71,28 +114,73 @@ const CN: React.FC = () => {
           </p>
         </div>
 
+        {/* Swiper Carousel */}
         <div className={styles.carousel}>
-          <div className={styles.testimonial}>
-            <p>{testimonials[currentSlide].text}</p>
-            <p className={styles.author}>{testimonials[currentSlide].author}</p>
-          </div>
-          <div className={styles.controls}>
-            <button onClick={handlePrev}>Anterior</button>
-            <button onClick={handleNext}>Próximo</button>
-          </div>
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={1}
+            modules={[Autoplay, Pagination]}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            onSlideChange={() =>
+              setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+            }
+          >
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <div className={styles.testimonial}>
+                  <p>{testimonial.text}</p>
+                  <p className={styles.author}>{testimonial.author}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-        <div className={styles.text}>
-          <p>
-            Atualmente a turma está fechada,
-            <a href="/contato" className={styles.link}>
-              clique aqui
-            </a>
-            e deixe o seu nome para ser avisado na próxima turma.
-          </p>
+
+        {/* Form Section */}
+        <div className={styles.contactContainer}>
+          <form className={styles.contactForm} onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Telefone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? <span className={styles.spinner}></span> : "Enviar"}
+            </button>
+          </form>
         </div>
         <div className={styles.button}>
-          <button>Quero iniciar minha terapia</button>
+          <a
+            href="https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Quero iniciar minha terapia</button>
+          </a>
         </div>
+
+        {/* Toast Container */}
+        <ToastContainer />
       </div>
     </main>
   );

@@ -30,7 +30,13 @@ const TCC: React.FC = () => {
           </p>
         </div>
         <div className={styles.button}>
-          <button>Quero iniciar minha terapia</button>
+          <a
+            href="https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20iniciar%20minha%20Terapia%20Cognitivo%20Comportamental."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Quero iniciar minha terapia</button>
+          </a>
         </div>
         <div className={styles.text}>
           <p>
@@ -66,7 +72,13 @@ const TCC: React.FC = () => {
           </p>
         </div>
         <div className={styles.button}>
-          <button>Quero iniciar minha terapia</button>
+          <a
+            href="https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Quero iniciar minha terapia</button>
+          </a>
         </div>
       </div>
     </main>

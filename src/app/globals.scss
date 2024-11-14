@@ -44,3 +44,13 @@ a {
     color-scheme: dark;
   }
 }
+
+.swiper-pagination-bullet {
+  background-color: #ccc;
+  opacity: 0.5;
+
+  &.swiper-pagination-bullet-active {
+    background-color: #1d3557;
+    opacity: 1;
+  }
+}

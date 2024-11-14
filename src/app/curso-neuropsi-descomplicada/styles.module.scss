@@ -9,17 +9,7 @@
   flex: 1;
 }
 
-.sidebar {
-  width: 20vw;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
 .cnd {
-  width: 100%;
-
   @media (max-width: 768px) {
     width: 100%;
   }

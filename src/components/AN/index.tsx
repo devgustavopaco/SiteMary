@@ -5,8 +5,8 @@ const AN: React.FC = () => {
   return (
     <main className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.banner}>
-          <img src="/images/banner23.jpg" alt="" />
+        <div className={styles.bannerAv}>
+          <img src="/images/bannerAv.jpeg" alt="" />
         </div>
         <div className={styles.title}>
           <h1>Avaliação Neuropsicológica</h1>
@@ -27,7 +27,13 @@ const AN: React.FC = () => {
           </p>
         </div>
         <div className={styles.button}>
-          <button>Quero iniciar minha terapia</button>
+          <a
+            href="https://wa.me/5585998482733?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20realizar%20uma%20Avaliação%20Neuropsicológica."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Quero iniciar minha terapia</button>
+          </a>
         </div>
         <div className={styles.faqSection}>
           <h2>Perguntas frequentes sobre avaliação neuropsicológica:</h2>
@@ -125,7 +131,13 @@ const AN: React.FC = () => {
           </div>
         </div>
         <div className={styles.button}>
-          <button>Quero iniciar minha terapia</button>
+          <a
+            href="https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Quero iniciar minha terapia</button>
+          </a>
         </div>
       </div>
     </main>

@@ -13,12 +13,12 @@ const Footer = () => {
             Cerqueira César - São Paulo - SP.
           </p>
           <p>
-            <a href="mailto:contato@carolinabernardo.com.br">
-              contato@carolinabernardo.com.br
+            <a href="maryanecavalcanti@gmail.com">
+              equipe.maryanecavalcanti@gmail.com
             </a>
           </p>
           <p>
-            Tel/WhatsApp: <strong>(11) 97123-0543</strong>
+            Tel/WhatsApp: <strong>(85) 99848.2733</strong>
           </p>
         </div>
 
@@ -29,16 +29,10 @@ const Footer = () => {
               <a href="#">LinkedIn</a>
             </li>
             <li>
-              <a href="#">Facebook Carolina Bernardo</a>
+              <a href="#">Facebook </a>
             </li>
             <li>
-              <a href="#">Instagram Carolina Bernardo</a>
-            </li>
-            <li>
-              <a href="#">Instagram TCC Positiva</a>
-            </li>
-            <li>
-              <a href="#">Facebook TCC Positiva</a>
+              <a href="">Instagram </a>
             </li>
           </ul>
         </div>
@@ -47,13 +41,13 @@ const Footer = () => {
           <h3>Navegação</h3>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">Áreas de Interesse</a>
+              <a href="/terapia-cognitivo-comportamental">Áreas de Interesse</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="/contato">Contato</a>
             </li>
           </ul>
         </div>

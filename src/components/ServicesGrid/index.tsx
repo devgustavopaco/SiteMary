@@ -3,34 +3,34 @@ import styles from "./styles.module.scss";
 
 const services = [
   {
-    icon: "/icons/User.svg",
+    icon: "/icons/users-thin.svg",
     text: "Terapia Cognitivo Comportamental (TCC)",
     link: "/terapia-cognitivo-comportamental",
   },
   {
-    icon: "/icons/Users.svg",
+    icon: "/icons/brain-thin.svg",
     text: "Avaliação Neuropsicológica",
     link: "/avaliacao-neuropsicologica",
   },
   {
-    icon: "/icons/PuzzlePiece.svg",
+    icon: "/icons/mindset.png",
     text: "Supervisão Clínica em Neuropsicologia",
     link: "/supervisao-clinica",
   },
   {
-    icon: "/icons/Book.svg",
+    icon: "/icons/thinking.png",
     text: "Grupo de Estudos Sou Neuropsi",
-    link: "/grupo-estudos-sou-neuropsi",
+    link: "/grupo-de-estudos",
   },
   {
-    icon: "/icons/Flag.svg",
+    icon: "/icons/thinking.png",
     text: "Curso Neuropsi Descomplicada",
     link: "/curso-neuropsi-descomplicada",
   },
   {
-    icon: "/icons/Gavel.svg",
-    text: "Contato",
-    link: "/contato",
+    icon: "/icons/doctor.png",
+    text: "Quero a opnião de um Neurologista",
+    link: "/quero-opniao-de-Neurologista",
   },
 ];
 

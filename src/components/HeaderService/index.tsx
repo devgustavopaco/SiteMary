@@ -52,7 +52,7 @@ const Header = () => {
           Home
         </Link>
         <Link
-          href="/areas-de-interesse"
+          href="/terapia-cognitivo-comportamental"
           className={pathname === "/areas-de-interesse" ? styles.active : ""}
           onClick={() => setMenuAberto(false)}
         >
