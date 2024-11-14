@@ -40,6 +40,7 @@ const testimonials = [
 ];
 
 const CN: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
