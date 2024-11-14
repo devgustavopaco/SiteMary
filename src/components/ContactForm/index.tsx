@@ -59,8 +59,8 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  const handleWhatsAppClick = (e: any) => {
-    e.preventDefault(); // Impede o comportamento padrão do Link
+  const handleWhatsAppClick = () => {
+    // Impede o comportamento padrão do Link
     window.open("https://wa.me/5585998482733", "_blank", "noopener,noreferrer");
   };
 

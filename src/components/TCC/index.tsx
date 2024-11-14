@@ -3,8 +3,8 @@ import React from "react";
 import styles from "./styles.module.scss";
 
 const TCC: React.FC = () => {
-  const handleWhatsAppClick = (e: any) => {
-    e.preventDefault(); // Evita o comportamento padrão do Link
+  const handleWhatsAppClick = () => {
+    // Evita o comportamento padrão do Link
     window.open(
       "https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta.",
       "_blank",
