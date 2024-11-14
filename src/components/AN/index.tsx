@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import styles from "../TCC/styles.module.scss";
 
@@ -16,7 +15,11 @@ const AN: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.bannerAv}>
-          <Image src="/images/bannerAv.jpeg" alt="" width={500} height={300} />
+          <img
+            src="/images/bannerAv.jpeg"
+            alt=""
+            // style={{ width: "500px", height: "300px" }}
+          />
         </div>
         <div className={styles.title}>
           <h1>Avaliação Neuropsicológica</h1>
