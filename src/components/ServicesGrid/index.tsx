@@ -29,8 +29,8 @@ const services = [
   },
   {
     icon: "/icons/doctor.png",
-    text: "Quero a opnião de um Neurologista",
-    link: "/quero-opniao-de-Neurologista",
+    text: "Quero a opinião de um Neurologista",
+    link: "/neuro",
   },
 ];
 

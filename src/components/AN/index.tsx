@@ -131,13 +131,7 @@ const AN: React.FC = () => {
           </div>
         </div>
         <div className={styles.button}>
-          <a
-            href="https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button>Quero iniciar minha terapia</button>
-          </a>
+          <button>Quero iniciar minha terapia</button>
         </div>
       </div>
     </main>
