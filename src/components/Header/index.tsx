@@ -35,13 +35,15 @@ const Header = () => {
         >
           Home
         </Link>
-        <a
+        <Link
           href="/terapia-cognitivo-comportamental"
-          className={pathname === "/" ? styles.ativo : ""}
+          passHref
           onClick={() => setMenuAberto(false)}
         >
-          Áreas de Interesse
-        </a>
+          <a className={pathname === "/" ? styles.ativo : ""}>
+            Áreas de Interesse
+          </a>
+        </Link>
         <Link
           href="/contato"
           className={pathname === "/contato" ? styles.ativo : ""}

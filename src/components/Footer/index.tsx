@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const Footer = () => {
@@ -41,13 +41,19 @@ const Footer = () => {
           <h3>Navegação</h3>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link href="/" passHref>
+                <a>Home</a>
+              </Link>
             </li>
             <li>
-              <a href="/terapia-cognitivo-comportamental">Áreas de Interesse</a>
+              <Link href="/terapia-cognitivo-comportamental" passHref>
+                <a>Áreas de Interesse</a>
+              </Link>
             </li>
             <li>
-              <a href="/contato">Contato</a>
+              <Link href="/contato">
+                <a>Contato</a>
+              </Link>
             </li>
           </ul>
         </div>

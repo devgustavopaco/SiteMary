@@ -1,9 +1,9 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
-import styles from "./styles.module.scss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import styles from "./styles.module.scss";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -59,6 +59,11 @@ const ContactForm: React.FC = () => {
     }
   };
 
+  const handleWhatsAppClick = (e: any) => {
+    e.preventDefault(); // Impede o comportamento padrão do Link
+    window.open("https://wa.me/5585998482733", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className={styles.background}>
       <div className={styles.contactContainer}>
@@ -82,15 +87,13 @@ const ContactForm: React.FC = () => {
               <a href="#">Facebook</a>
             </li>
           </ul>
-          <a
-            href="https://wa.me/5585998482733"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          <button
+            onClick={handleWhatsAppClick}
+            className={styles.whatsappButton}
           >
-            <button className={styles.whatsappButton}>
-              Entre em contato pelo WhatsApp
-            </button>
-          </a>
+            Entre em contato pelo WhatsApp
+          </button>
         </div>
 
         {/* Form */}
