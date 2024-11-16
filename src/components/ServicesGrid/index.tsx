@@ -18,7 +18,7 @@ const services = [
     link: "/supervisao-clinica",
   },
   {
-    icon: "/icons/thinking.png",
+    icon: "/icons/book.png",
     text: "Grupo de Estudos Sou Neuropsi",
     link: "/grupo-de-estudos",
   },

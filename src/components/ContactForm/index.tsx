@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { FormEvent, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -64,29 +65,28 @@ const ContactForm: React.FC = () => {
     window.open("https://wa.me/5585998482733", "_blank", "noopener,noreferrer");
   };
 
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=equipe.maryanecavalcanti@gmail.com`;
+
   return (
     <div className={styles.background}>
       <div className={styles.contactContainer}>
         <div className={styles.contactText}>
           <h2>Vamos Conversar</h2>
           <p>
-            Precisa de apoio psicológico ou deseja iniciar sua jornada de
-            autoconhecimento? Estamos aqui para ajudar! Entre em contato conosco
-            e conte-nos um pouco sobre você. Adoraríamos entender como podemos
-            colaborar para que você alcance bem-estar e equilíbrio em sua vida.
+            Precisa de apoio psicológico ou, como psicólogo, deseja lapidar os
+            seus conhecimentos em Neuropsicologia? Estou aqui para ajudar! Entre
+            em contato com minha equipe e conte-nos um pouco sobre você.
+            Adoraríamos entender como podemos colaborar para que você alcance
+            seus objetivos.
           </p>
 
           <h3>Email</h3>
-          <p>maryanecavalcanti@gmail.com</p>
-          <h3>Socials</h3>
-          <ul>
-            <li>
-              <a href="#">Instagram</a>
-            </li>
-            <li>
-              <a href="#">Facebook</a>
-            </li>
-          </ul>
+          <Link href={gmailLink}>
+            <p>equipe.maryanecavalcanti@gmail.com</p>
+          </Link>
+          <Link href="https://www.instagram.com/maryanecavalcanti_/" passHref>
+            <p>Instagram</p>
+          </Link>
 
           <button
             onClick={handleWhatsAppClick}

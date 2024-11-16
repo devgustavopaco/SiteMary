@@ -186,13 +186,6 @@ const CN: React.FC = () => {
             </button>
           </form>
         </div>
-        <div className={styles.button}>
-          <button onClick={handleWhatsAppClick}>
-            Quero iniciar minha terapia
-          </button>
-        </div>
-
-        {/* Toast Container */}
         <ToastContainer />
       </div>
     </main>
