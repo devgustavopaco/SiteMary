@@ -2,23 +2,32 @@ import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const Footer = () => {
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=equipe.maryanecavalcanti@gmail.com`;
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.footerColumn}>
           <h3>Maryane Cavalcanti</h3>
           <p>
-            Alameda Santos, 211 - cj. 212.
-            <br />
-            Cerqueira César - São Paulo - SP.
+            Clínica Venitá Av. Dom Luís, nº 500, sala 1716, Aldeota, Torre
+            Comercial do Shopping Aldeota
           </p>
+          <p>Fortaleza - CE</p>
           <p>
-            <a href="maryanecavalcanti@gmail.com">
+            <Link href={gmailLink} passHref>
               equipe.maryanecavalcanti@gmail.com
-            </a>
+            </Link>
           </p>
           <p>
-            Tel/WhatsApp: <strong>(85) 99848.2733</strong>
+            Tel/WhatsApp:
+            <a
+              href="https://wa.me/5585998482733"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>(85) 99848.2733</strong>
+            </a>
           </p>
         </div>
 
@@ -32,7 +41,12 @@ const Footer = () => {
               <a href="#">Facebook </a>
             </li> */}
             <li>
-              <a href="">Instagram </a>
+              <Link
+                href="https://www.instagram.com/maryanecavalcanti_/"
+                passHref
+              >
+                Instagram
+              </Link>
             </li>
           </ul>
         </div>
@@ -58,7 +72,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.footerBottom}>
-        <p>Site desenvolvido pelo Cérebro © 2020</p>
+        {/* <p>Site desenvolvido pela Solid Tech © 2024</p> */}
       </div>
     </footer>
   );

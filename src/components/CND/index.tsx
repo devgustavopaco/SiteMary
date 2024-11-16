@@ -121,6 +121,9 @@ const CN: React.FC = () => {
             horas na sala de aula e supervisionando diversos neuropsicólogos, o
             Neuropsi Descomplicada nasceu. Duas turmas já aconteceram.
           </p>
+          <h4>
+            O que os neuropsicólogos que estudaram com a Maryane estão dizendo:
+          </h4>
         </div>
 
         {/* Swiper Carousel */}
@@ -146,13 +149,18 @@ const CN: React.FC = () => {
           </Swiper>
         </div>
 
-        {/* Form Section */}
+        <div className={styles.text}>
+          <h4 style={{ paddingBottom: "10px", paddingTop: "30px" }}>
+            Atualmente a turma está fechada, deixe aqui o seu nome para ser
+            avisado na próxima turma:
+          </h4>
+        </div>
         <div className={styles.contactContainer}>
           <form className={styles.contactForm} onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
-              placeholder="Name"
+              placeholder="Nome"
               value={formData.name}
               onChange={handleChange}
               required

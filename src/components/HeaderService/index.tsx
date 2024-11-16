@@ -43,6 +43,9 @@ const Header = () => {
   const handleHomeClick = () => {
     router.push("/");
   };
+
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=equipe.maryanecavalcanti@gmail.com`;
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div
@@ -90,16 +93,16 @@ const Header = () => {
         </div>
       </nav>
       <div className={styles.social}>
-        <Link href="#" passHref>
+        {/* <Link href="#" passHref>
           <img src="/images/linkedin.svg" alt="LinkedIn" />
         </Link>
         <Link href="#" passHref>
           <img src="/images/face.svg" alt="Facebook" />
-        </Link>
-        <Link href="#" passHref>
+        </Link> */}
+        <Link href="https://www.instagram.com/maryanecavalcanti_/" passHref>
           <img src="/images/insta.svg" alt="Instagram" />
         </Link>
-        <Link href="#" passHref>
+        <Link href={gmailLink} passHref>
           <img src="/images/email.svg" alt="Email" />
         </Link>
       </div>

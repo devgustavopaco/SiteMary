@@ -4,9 +4,8 @@ import styles from "./styles.module.scss";
 
 const TCC: React.FC = () => {
   const handleWhatsAppClick = () => {
-    // Evita o comportamento padrão do Link
     window.open(
-      "https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20consulta.",
+      "https://wa.me/5585998482733?text=Olá,%20entrei%20em%20contato%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20informações%20sobre%20terapia.",
       "_blank",
       "noopener,noreferrer"
     );
@@ -38,11 +37,7 @@ const TCC: React.FC = () => {
             muitas vezes é &ldquo;disfarçado&rdquo; de fato ou verdade.
           </p>
         </div>
-        <div className={styles.button}>
-          <button onClick={handleWhatsAppClick}>
-            Quero iniciar minha terapia
-          </button>
-        </div>
+
         <div className={styles.text}>
           <p>
             Através da TCC, os pacientes aprendem a identificar esses
