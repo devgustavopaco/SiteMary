@@ -26,6 +26,8 @@ const Header = () => {
     router.push("/");
   };
 
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=equipe.maryanecavalcanti@gmail.com`;
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
       <div
@@ -68,10 +70,7 @@ const Header = () => {
         <Link href="https://www.instagram.com/maryanecavalcanti_/" passHref>
           <img src="/images/insta.svg" alt="Instagram" />
         </Link>
-        <Link
-          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVVvfkCTBfplstJcbFLmRglPZQpqSlpXgfvVLvJvQCnQmpbrxrpkwRhDvNcdgBQtsSpDNs"
-          passHref
-        >
+        <Link href={gmailLink} passHref>
           <img src="/images/email.svg" alt="Email" />
         </Link>
       </div>
