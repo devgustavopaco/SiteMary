@@ -9,7 +9,7 @@ const Profile = () => {
           <img src="/images/profile.png" alt="Maryane Cavalcanti" />
         </div>
         <div className={styles.info}>
-          <h1>Maryane Cavalcanti</h1>
+          <h1>Maryane Mendes Cavalcanti Damasceno</h1>
           <p className={styles.crp}>CRP 11/10624</p>
           <p className={styles.description}>
             Psicóloga, neuropsicóloga, professora e mentora. Com mais de 9 anos

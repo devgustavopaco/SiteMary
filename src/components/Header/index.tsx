@@ -65,10 +65,13 @@ const Header = () => {
         <Link href="#" passHref>
           <img src="/images/face.svg" alt="Facebook" />
         </Link> */}
-        <Link href="#" passHref>
+        <Link href="https://www.instagram.com/maryanecavalcanti_/" passHref>
           <img src="/images/insta.svg" alt="Instagram" />
         </Link>
-        <Link href="#" passHref>
+        <Link
+          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGMvfvVdKvwTBpKKdWNrdCxPbWFDcBpwQVXchrswdHHlLjRmDpJDgbzsMWRgftKjpZNjljt"
+          passHref
+        >
           <img src="/images/email.svg" alt="Email" />
         </Link>
       </div>
