@@ -69,7 +69,7 @@ const Header = () => {
           <img src="/images/insta.svg" alt="Instagram" />
         </Link>
         <Link
-          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGMvfvVdKvwTBpKKdWNrdCxPbWFDcBpwQVXchrswdHHlLjRmDpJDgbzsMWRgftKjpZNjljt"
+          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMVVvfkCTBfplstJcbFLmRglPZQpqSlpXgfvVLvJvQCnQmpbrxrpkwRhDvNcdgBQtsSpDNs"
           passHref
         >
           <img src="/images/email.svg" alt="Email" />
