@@ -103,7 +103,7 @@ const Header = () => {
           <img src="/images/insta.svg" alt="Instagram" />
         </Link>
         <Link href={gmailLink} passHref>
-          <img src="/images/email.svg" alt="Email" />
+          <img src="/icons/email.svg" alt="Email" />
         </Link>
       </div>
       <div className={styles.menuHamburguer} onClick={toggleMenu}>

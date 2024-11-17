@@ -100,7 +100,7 @@ const CN: React.FC = () => {
     <main className={styles.container}>
       <div className={styles.content}>
         <div className={styles.bannerCurso}>
-          <img src="/images/cerebelo.webp" alt="Banner" />
+          <img src="/images/bannerN.jpg" alt="Banner" />
         </div>
         <div className={styles.title}>
           <h1>Curso Neuropsi Descomplicada</h1>

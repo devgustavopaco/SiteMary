@@ -5,26 +5,32 @@ const services = [
   {
     icon: "/icons/users-thin.svg",
     text: "Terapia Cognitivo Comportamental (TCC)",
+    description:
+      "Iniciar o processo de terapia é um passo importante para atravessar dificuldades emocionais, melhorar relacionamentos e construir uma vida valiosa",
     link: "/terapia-cognitivo-comportamental",
   },
   {
     icon: "/icons/brain-thin.svg",
     text: "Avaliação Neuropsicológica",
+    description: "Só é possível tratar aquilo que eu sei o que é",
     link: "/avaliacao-neuropsicologica",
   },
   {
     icon: "/icons/mindset.png",
     text: "Supervisão Clínica em Neuropsicologia",
+    description: "Raciocínio clínico: é diferente pensar juntos",
     link: "/supervisao-clinica",
   },
   {
     icon: "/icons/book.png",
     text: "Grupo de Estudos Sou Neuropsi",
+    description: "Em construção",
     link: "/grupo-de-estudos",
   },
   {
     icon: "/icons/thinking.png",
     text: "Curso Neuropsi Descomplicada",
+    description: "Sem travas no raciocínio clínico",
     link: "/curso-neuropsi-descomplicada",
   },
   {
@@ -51,6 +57,7 @@ const ServicesGrid = () => {
               />
 
               <p>{service.text}</p>
+              <h5>{service.description}</h5>
               <Link href={service.link} passHref>
                 <button className={styles.button}>Conheça Mais</button>
               </Link>
